@@ -14,7 +14,6 @@ function observeUser(e){
 
 	let regExpInput = /[a-zA-Z1-9]{2,15}/;
 	let inputValid = regExpInput.test(userInput.value);
-	console.log('login:', inputValid);
 
 	if(inputValid === false){
 		userInput.classList.add('invalidInput');
@@ -31,8 +30,7 @@ function observePass(e){
 	let regExpPass = /[a-zA-Z1-9]{6,15}(?=.*[$])(?=.*[#])/;
 
 	let passValid = regExpPass.test(passInput.value);
-	console.log('pass', passValid);
-
+	
 	if(passValid === false){
 		passInput.classList.add('invalidInput');
 	}else{
@@ -45,6 +43,7 @@ function processData(e){
 
 	if(userInput.className !== 'invalidInput' && passInput.className !== 'invalidInput'){
 		console.log(userInput.value);
+		loginForm.reset();
 	}else{
 		console.log('Please enter valid login and password!');
 	}	
