@@ -26,10 +26,10 @@ function observeUser(e){
 function observePass(e){
 	e.preventDefault();
 
-	//let regExpPass = /([a-zA-Z1-9](?=.*[$])(?=.*[#])){6,15}/;
-	let regExpPass = /[a-zA-Z1-9]{6,15}(?=.*[$])(?=.*[#])/;
+	let regExpPass = /(?=[a-zA-Z\d#]*?\$)(?=[a-zA-Z\d$]*?\#)[a-zA-Z\d$#]{6,15}/;
 
 	let passValid = regExpPass.test(passInput.value);
+	console.log(passValid);
 	
 	if(passValid === false){
 		passInput.classList.add('invalidInput');

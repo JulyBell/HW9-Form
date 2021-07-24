@@ -58,6 +58,6 @@ a{
 }
 
 .invalidInput{
-	box-shadow: 0 0 3px #CC0000;
+	border: 1px solid #CC0000;
 	background-color:#ffc0cb;
 }
