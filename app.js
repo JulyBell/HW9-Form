@@ -12,7 +12,7 @@ passInput.addEventListener('input', observePass);
 function observeUser(e){
 	e.preventDefault();
 
-	let regExpInput = /[a-zA-Z1-9]{2,15}/;
+	let regExpInput = /^[a-zA-Z1-9]{2,15}$/;
 	let inputValid = regExpInput.test(userInput.value);
 
 	if(inputValid === false){
@@ -26,7 +26,7 @@ function observeUser(e){
 function observePass(e){
 	e.preventDefault();
 
-	let regExpPass = /(?=[a-zA-Z\d#]*?\$)(?=[a-zA-Z\d$]*?\#)[a-zA-Z\d$#]{6,15}/;
+	let regExpPass = /^(?=.*[#$])[a-zA-Z0-9].{6,15}$/;
 
 	let passValid = regExpPass.test(passInput.value);
 	console.log(passValid);
