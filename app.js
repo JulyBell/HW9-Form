@@ -9,6 +9,8 @@ button.addEventListener('click', processData);
 userInput.addEventListener('input', observeUser);
 passInput.addEventListener('input', observePass);
 
+
+
 function observeUser(e){
 	e.preventDefault();
 
@@ -26,7 +28,7 @@ function observeUser(e){
 function observePass(e){
 	e.preventDefault();
 
-	let regExpPass = /^(?=.*[#$])[a-zA-Z0-9].{6,15}$/;
+	let regExpPass = /^(?=.*[#])(?=.*[$])[a-zA-Z0-9].{6,15}$/;
 
 	let passValid = regExpPass.test(passInput.value);
 	console.log(passValid);
